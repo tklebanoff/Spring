@@ -91,15 +91,16 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-            for item in self.tabBar.items {
-                let x = item as? [UITabBarItem]
-                if x != nill {
-                    if let image = x.image {
-                        x.image = x.imageWithColor(tintColor: self.normalTint).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                    }
+
+        let items = self.tabBar.items as? [UITabBarItem]
+
+        if items != nill {
+            for item in items {
+                if let image = item.image {
+                    item.image = item.imageWithColor(tintColor: self.normalTint).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                 }
             }
+        }
     }
 }
 
