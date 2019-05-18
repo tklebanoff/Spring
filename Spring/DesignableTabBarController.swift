@@ -97,7 +97,7 @@ import UIKit
         if items != nil {
             for item in items! {
                 if let image = item.image {
-                    item.image = item.imageWithColor(tintColor: self.normalTint).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                    item.image = image.imageWithColor(tintColor: self.normalTint).withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                 }
             }
         }
